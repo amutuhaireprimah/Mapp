@@ -6,4 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".ActivityOne">
 
+
+    <Button
+        android:id="@+id/playbtn"
+        android:layout_width="193dp"
+        android:layout_height="42dp"
+        android:text="playmusic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19" />
+
+    <Button
+        android:id="@+id/btnstop"
+        android:layout_width="189dp"
+        android:layout_height="44dp"
+        android:text="stopmusic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playbtn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
