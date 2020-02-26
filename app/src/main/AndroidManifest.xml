@@ -5,11 +5,13 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Mappl"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityTwo"></activity>
+        <activity android:name=".SplashScreen"></activity>
+        <activity android:name=".ListView" />
+        <activity android:name=".ActivityTwo" />
         <activity android:name=".ActivityOne" />
         <activity android:name=".DisplayMessageActivity" />
         <activity android:name=".MainActivity">
