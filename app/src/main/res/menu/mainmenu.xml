@@ -8,4 +8,7 @@
     <item
         android:id="@+id/gal"
         android:title="gallery" />
+    <item
+        android:id="@+id/cp"
+        android:title="cprogram "/>
 </menu>

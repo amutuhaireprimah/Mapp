@@ -11,6 +11,7 @@ import android.widget.Toast;
 import java.util.List;
 import java.util.ArrayList;
 import android.widget.ArrayAdapter;
+
 public class ListView extends AppCompatActivity {
 
     @Override
@@ -18,7 +19,7 @@ public class ListView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_view);
         setTitle("List items");
-        ListView listView = (ListView)findViewById(R.id.list);
+        //ListView listView = findViewById(R.id.list);
         List<String> dataList = new ArrayList<String>();
         dataList.add("Names");
         dataList.add("Age");
@@ -39,4 +40,5 @@ public class ListView extends AppCompatActivity {
             }
         });
     }
+
 }
