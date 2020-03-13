@@ -1,6 +1,7 @@
 package com.example.mappl;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +13,7 @@ import java.util.List;
 import java.util.ArrayList;
 import android.widget.ArrayAdapter;
 
-public class ListView extends AppCompatActivity {
+public class ListView extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +31,7 @@ public class ListView extends AppCompatActivity {
                 android.R.layout.simple_list_item_multiple_choice, dataList);
         ListView.setAdapter(arrayAdapter);
 
-        ListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+       ListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int index, long l) {
                 Object clickItemObj = adapterView.getAdapter().getItem(index);
