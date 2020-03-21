@@ -3,12 +3,18 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/con"
-        android:title="contacts" />
-    <item
-        android:id="@+id/gal"
-        android:title="gallery" />
-    <item
         android:id="@+id/cp"
         android:title="cprogram "/>
+    <item
+        android:id="@+id/lists"
+        android:title="List View "/>
+    <item
+        android:id="@+id/mus"
+        android:title="Play Music "/>
+    <item
+        android:id="@+id/call"
+        android:title="Call Phone "/>
+    <item
+        android:id="@+id/mail"
+        android:title="Send Mail "/>
 </menu>

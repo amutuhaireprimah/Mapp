@@ -20,7 +20,7 @@ Button stop;
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mediaPlayer=MediaPlayer.create(getApplicationContext(),R.raw.akon);
+                mediaPlayer=MediaPlayer.create(getApplicationContext(),R.raw.amazing);
                 mediaPlayer.start();
             }
         });

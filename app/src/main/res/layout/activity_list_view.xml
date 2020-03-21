@@ -8,15 +8,14 @@
 
     <ListView
         android:id="@+id/list"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:choiceMode="singleChoice"
-        android:clickable="true"
-        android:divider="@android:color/holo_green_light"
-        android:dividerHeight="5dp"
+        android:layout_width="317dp"
+        android:layout_height="479dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="94dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="159dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
-
-    </ListView>
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

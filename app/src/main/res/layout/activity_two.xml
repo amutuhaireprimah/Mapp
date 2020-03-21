@@ -6,4 +6,19 @@
     android:layout_height="match_parent"
     tools:context=".ActivityTwo">
 
+    <TextView
+        android:id="@+id/file"
+        android:layout_width="259dp"
+        android:layout_height="420dp"
+        android:layout_marginStart="187dp"
+        android:layout_marginTop="174dp"
+        android:layout_marginEnd="165dp"
+        android:layout_marginBottom="538dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.579"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
