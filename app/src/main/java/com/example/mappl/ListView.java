@@ -18,11 +18,17 @@ public class ListView extends AppCompatActivity {
         setContentView(R.layout.activity_list_view);
         listView=findViewById(R.id.list);
         final ArrayList<String>arrayList = new ArrayList<>();
-        arrayList.add("Name");
+        arrayList.add("Names");
         arrayList.add("Age");
-        arrayList.add("Sex");
-        arrayList.add("Places");
+        arrayList.add("district");
+        arrayList.add("schools");
         arrayList.add("Restaurants");
+        arrayList.add("cities");
+        arrayList.add("countries");
+        arrayList.add("villages");
+        arrayList.add("hospitals");
+        arrayList.add("");
+
         ArrayAdapter arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,arrayList);
         listView.setAdapter(arrayAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
@@ -31,5 +37,6 @@ public class ListView extends AppCompatActivity {
            }
         });
     }
+
 
 }

@@ -28,12 +28,12 @@ public class MainActivity extends AppCompatActivity {
     BroadcastReceiver receiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            int level = intent.getIntExtra("level",0);
-            ProgressBar progress = (ProgressBar)findViewById(R.id.prog);
+            int level = intent.getIntExtra("level", 0);
+            ProgressBar progress = (ProgressBar) findViewById(R.id.prog);
             progress.setProgress(level);
 
-            TextView textView = (TextView)findViewById(R.id.batterLevel);
-            textView.setText("Battery level" + Integer.toString(level)+"%");
+            TextView textView = (TextView) findViewById(R.id.batterLevel);
+            textView.setText("Battery level" + Integer.toString(level) + "%");
         }
     };
 
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        registerReceiver(receiver,new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+        registerReceiver(receiver, new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
     }
 
     public void sendMessage(View view) {
@@ -49,32 +49,35 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "Sending message " + message.getText().toString(),
                 Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, DisplayMessageActivity.class);
-        intent.putExtra("MESSAGE", message.getText().toString()); startActivity(intent);
+        intent.putExtra("MESSAGE", message.getText().toString());
+        startActivity(intent);
         message.setText("");
     }
-    public void setAlert(View view){
 
-        EditText text=(EditText)findViewById(R.id.seconds);
+    public void setAlert(View view) {
+
+        EditText text = (EditText) findViewById(R.id.seconds);
         int in = Integer.parseInt(text.getText().toString());
 
         //Create an intent and call your receiver
-        Intent intent = new Intent(this,BroadcastReceiver.class);
+        Intent intent = new Intent(this, BroadcastReceiver.class);
 
         //Create a pending Intent to be fired
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(this.getApplicationContext(),0,intent,0);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this.getApplicationContext(), 0, intent, 0);
 
         //Recall the alarm manager class
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
 
         //Real time clock to be used
 
-        alarmManager.set(AlarmManager.RTC_WAKEUP,System.currentTimeMillis() + (in * 1000),pendingIntent);
-        Toast.makeText(this,"Alarm set in" + in + "seconds",Toast.LENGTH_LONG).show();
+        alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + (in * 1000), pendingIntent);
+        Toast.makeText(this, "Alarm set in" + in + "seconds", Toast.LENGTH_LONG).show();
     }
+
     public boolean onCreateOptionsMenu(Menu menu) {
 
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.mainmenu,menu);
+        inflater.inflate(R.menu.mainmenu, menu);
         return true;
     }
 
@@ -84,20 +87,23 @@ public class MainActivity extends AppCompatActivity {
         switch (itemId) {
 
             case R.id.cp:
-                startActivity(new Intent(this,ActivityTwo.class));
-                return  true;
+                startActivity(new Intent(this, ActivityTwo.class));
+                return true;
             case R.id.lists:
-                startActivity(new Intent(this,ListView.class));
+                startActivity(new Intent(this, ListView.class));
                 return true;
 
             case R.id.mus:
-                startActivity(new Intent(this,ActivityOne.class));
+                startActivity(new Intent(this, ActivityOne.class));
+                return true;
+            case R.id.splash:
+                startActivity(new Intent(this, SplashScreen.class));
                 return true;
 
             case R.id.mail:
                 Intent i = new Intent(Intent.ACTION_SEND);
                 i.setData(Uri.parse("mailto"));
-                String to [] = {"muhairwep@yahaoo.com","primahamutuh63@gmail.com"};
+                String to[] = {"muhairwep@yahaoo.com", "primahamutuh63@gmail.com"};
                 i.putExtra(Intent.EXTRA_EMAIL, to);
                 i.putExtra(Intent.EXTRA_SUBJECT, "Greetings");
                 i.putExtra(Intent.EXTRA_TEXT, "Enjoy your weekend");
@@ -130,8 +136,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     Intent in = new Intent(Intent.ACTION_CALL, Uri.parse("tel:0779794299"));
                     startActivity(in);
-                }
-                catch (Exception e){
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
                 return true;
@@ -142,3 +147,4 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
+
