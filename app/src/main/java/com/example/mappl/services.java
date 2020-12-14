@@ -25,10 +25,10 @@ public class services extends AppCompatActivity implements View.OnClickListener 
     @Override
     public void onClick(View v) {
         if(v==Start){
-            startService(new Intent(this, Ring.class));
+            startService(new Intent(this, Play.class));
         }
         else if (v==Stop){
-            stopService(new Intent(this, Ring.class));
+            stopService(new Intent(this, Play.class));
 
         }
 

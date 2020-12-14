@@ -9,11 +9,10 @@ import androidx.annotation.Nullable;
 
 import static android.app.Service.START_STICKY;
 
-public class Ring extends services{
+public class Play extends services{
     private MediaPlayer mime;
-    @Nullable
-    //@Override
-    public IBinder onBind(Intent intent) {
+
+    public IBinder onBind(Intent intent){
         return null;
     }
     public int onStartCommand( Intent t, int mute, int sid) {
